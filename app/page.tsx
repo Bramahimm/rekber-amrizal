@@ -1,9 +1,11 @@
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
+import { Navbar } from "@/components/layout/Navbar";
 
 export default function HomePage() {
   return (
     <Section>
+      <Navbar/>
       <Container>
         <div className="space-y-12">
           
