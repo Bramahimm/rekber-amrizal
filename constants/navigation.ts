@@ -1,11 +1,9 @@
 export const MAIN_NAV = [
   { label: "Beranda", href: "/" },
-  { label: "Layanan", href: "/services" },
-  { label: "Panduan", href: "/transaction-guide" },
+  { label: "Panduan", href: "/#panduan" },
   { label: "Cek Blacklist", href: "/blacklist" },
   { label: "Lapor Akun", href: "/report" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Kontak", href: "/contact" },
+  { label: "Kontak", href: "/#kontak" },
 ];
 
 export const SOCIAL_LINKS = [
