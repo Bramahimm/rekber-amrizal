@@ -86,7 +86,6 @@ export default function BlacklistPage() {
               {/* State: Idle (Belum melakukan pencarian) */}
               {status === "idle" && (
                 <div className="bg-muted/50 border border-border rounded-xl p-6 text-center flex flex-col items-center gap-3">
-                  <Info className="w-8 h-8 text-muted-foreground" />
                   <p className="text-muted-foreground text-sm">
                     Gunakan formulir di atas untuk memulai pencarian. Data yang
                     ditampilkan berasal dari rekam jejak pelaporan pengguna.
@@ -111,7 +110,7 @@ export default function BlacklistPage() {
                       </strong>{" "}
                       tidak tercatat dalam daftar hitam kami saat ini. Namun,
                       kami menyarankan Anda untuk tetap menggunakan layanan
-                      Escrow (Rekber) untuk menghindari risiko penipuan di masa
+                      Rekber untuk menghindari risiko penipuan di masa
                       depan.
                     </p>
                   </div>
@@ -144,11 +143,10 @@ export default function BlacklistPage() {
 
             {/* Disclaimer */}
             <div className="mt-8 flex items-start gap-3 p-4 bg-accent rounded-lg border border-border">
-              <AlertCircle className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
               <p className="text-xs text-muted-foreground leading-relaxed">
-                <strong>Catatan Administratif:</strong> Hasil pencarian ini
-                berdasarkan laporan yang masuk ke sistem Amrizal Escrow. Status
-                <strong>Aman</strong> bukan merupakan garansi mutlak, melainkan indikasi bahwa
+                <strong>Catatan:</strong> Hasil pencarian ini
+                berdasarkan laporan yang masuk ke sistem Amrizal Rekber. Status
+                <strong> Aman</strong> bukan merupakan garansi mutlak, melainkan indikasi bahwa
                 belum ada laporan negatif yang diverifikasi terhadap data
                 tersebut.
               </p>

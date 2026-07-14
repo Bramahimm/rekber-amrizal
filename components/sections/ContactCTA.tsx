@@ -15,7 +15,7 @@ export function ContactCTA() {
               Siap Mengamankan Transaksi Anda?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              Hubungi admin kami sekarang. Proses pembuatan grup transaksi
+              Hubungi Amrizal sekarang. Proses pembuatan grup transaksi
               memakan waktu kurang dari 5 menit pada jam operasional.
             </p>
           </div>
@@ -36,7 +36,7 @@ export function ContactCTA() {
           <div className="pt-8 border-t border-primary-foreground/10 flex items-center justify-center gap-2 text-sm text-primary-foreground/70 pb-16">
             <Clock className="w-4 h-4" />
             <span>
-              Jam Operasional: <strong>08:00 - 00:30 WIB</strong> (Libur di Waktu Sibuk)
+              Jam Kerja: <strong>07:00 - 00:30 WIB</strong> (Libur di Waktu Sibuk)
             </span>
           </div>
         </div>

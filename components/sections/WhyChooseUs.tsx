@@ -14,13 +14,13 @@ const FEATURES = [
     icon: Lock,
     title: "Dana Ditahan Terpusat",
     description:
-      "Uang pembeli diamankan dalam rekening khusus perusahaan dan baru akan diteruskan ke penjual setelah barang dipastikan sesuai kesepakatan.",
+      "Uang pembeli diamankan dalam rekening khusus dan baru akan diteruskan ke penjual setelah barang dipastikan sesuai kesepakatan.",
   },
   {
     icon: Scale,
     title: "Pihak Ketiga Netral",
     description:
-      "Kami bertindak murni sebagai penengah yang tidak memihak, memastikan baik pembeli maupun penjual mendapatkan haknya secara adil.",
+      "Amrizal bertindak murni sebagai penengah yang tidak memihak, memastikan baik pembeli maupun penjual mendapatkan haknya secara adil.",
   },
   {
     icon: Clock,
@@ -38,7 +38,7 @@ const FEATURES = [
     icon: Headset,
     title: "Terpantau 24/7",
     description:
-      "Tim operasional memantau jalannya transaksi dan siap memberikan instruksi pemecahan kendala kapan pun dibutuhkan.",
+      "Amrizal memantau jalannya transaksi dan siap memberikan instruksi pemecahan kendala kapan pun dibutuhkan.",
   },
   {
     icon: History,
@@ -50,12 +50,12 @@ const FEATURES = [
 
 export function WhyChooseUs() {
   return (
-    <Section className="bg-muted/50 border-y border-border">
+    <Section className="bg-muted/50 ">
       <Container>
         <div className="space-y-12">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-primary pt-8">
               Standar Keamanan Transaksi
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -65,7 +65,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-8">
             {FEATURES.map((feature, index) => {
               const Icon = feature.icon;
               return (

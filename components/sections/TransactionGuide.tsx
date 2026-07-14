@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Handshake,
   MessageSquarePlus,
@@ -8,20 +9,19 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
-import { cn } from "@/lib/utils";
 
 const STEPS = [
   {
     icon: Handshake,
     title: "Kesepakatan Bersama",
     description:
-      "Pembeli dan penjual sepakat untuk menggunakan layanan Amrizal Escrow untuk mengamankan transaksi.",
+      "Pembeli dan penjual sepakat untuk menggunakan layanan Amrizal untuk mengamankan transaksi.",
   },
   {
     icon: MessageSquarePlus,
     title: "Pembuatan Grup Transaksi",
     description:
-      "Admin akan membuatkan grup percakapan khusus (WhatsApp/Facebook) untuk menjaga transparansi komunikasi ketiga pihak.",
+      "Admin akan membuatkan grup percakapan khusus Facebook untuk menjaga transparansi komunikasi ketiga pihak.",
   },
   {
     icon: ShieldAlert,
@@ -53,11 +53,11 @@ export function TransactionGuide() {
   return (
     <Section id="panduan" className="bg-background overflow-hidden">
       <Container>
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">
-              Cara Menggunakan <span className="text-secondary">Rekber</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-primary pt-8">
+              Cara Menggunakan <span className="text-secondary">Rekber Amrizal</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Proses transaksi didesain berlapis untuk memastikan tidak ada
@@ -65,74 +65,53 @@ export function TransactionGuide() {
             </p>
           </div>
 
-          {/* Timeline Layout */}
-          <div className="relative max-w-4xl mx-auto">
-            {/* Garis vertikal di tengah untuk Desktop, di kiri untuk Mobile */}
-            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 md:translate-x-0 hidden sm:block"></div>
+          {/* 2-Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+            {/* KOLOM KIRI: Timeline (Mengambil 7 dari 12 kolom di Desktop) */}
+            <div className="lg:col-span-7 relative pl-8 md:pl-10">
+              {/* Garis vertikal timeline */}
+              <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-border rounded-full"></div>
 
-            <div className="space-y-8 md:space-y-12">
-              {STEPS.map((step, index) => {
-                const Icon = step.icon;
-                const isEven = index % 2 === 0;
-
-                return (
-                  <div
-                    key={index}
-                    className="relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
-                    {/* Bagian Kiri (Teks untuk Even, Kosong untuk Odd) */}
+              <div className="space-y-10">
+                {STEPS.map((step, index) => {
+                  const Icon = step.icon;
+                  return (
                     <div
-                      className={cn(
-                        "md:w-1/2 flex flex-col",
-                        isEven
-                          ? "md:items-end md:pr-12 md:text-right"
-                          : "md:hidden",
-                      )}>
-                      <h3 className="text-xl font-bold text-primary mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-                        {step.description}
-                      </p>
-                    </div>
-
-                    {/* Ikon Tengah (Node Timeline) */}
-                    <div className="absolute left-0 md:left-1/2 -translate-x-0 md:-translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full border-4 border-background bg-secondary text-secondary-foreground shadow-sm z-10 shrink-0 hidden sm:flex">
-                      <Icon className="w-5 h-5" />
-                    </div>
-
-                    {/* Card Tampilan Mobile (Atau digunakan juga sebagai fallback desain jika layout mengecil) */}
-                    <div className="sm:hidden flex items-start gap-4 bg-accent/50 p-5 rounded-xl border border-border w-full">
-                      <div className="w-10 h-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5" />
+                      key={index}
+                      className="relative flex flex-col md:flex-row items-start gap-4 md:gap-6 group">
+                      {/* Ikon Node Timeline */}
+                      <div className="absolute -left-[42px] md:-left-[54px] flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-background bg-secondary/10 text-secondary shadow-sm z-10 shrink-0 group-hover:bg-secondary group-hover:text-secondary-foreground transition-smooth">
+                        <Icon className="w-4 h-4 md:w-5 md:h-5" />
                       </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-primary mb-1">
+
+                      {/* Konten Teks */}
+                      <div className="bg-accent/30 md:bg-transparent p-5 md:p-0 rounded-xl border border-border md:border-none w-full group-hover:translate-x-2 transition-transform duration-300">
+                        <h3 className="text-lg md:text-xl font-bold text-primary mb-2">
                           {step.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                     </div>
+                  );
+                })}
+              </div>
+            </div>
 
-                    {/* Bagian Kanan (Teks untuk Odd, Kosong untuk Even) */}
-                    <div
-                      className={cn(
-                        "md:w-1/2 flex flex-col",
-                        !isEven
-                          ? "md:items-start md:pl-12 md:text-left hidden md:flex"
-                          : "hidden",
-                      )}>
-                      <h3 className="text-xl font-bold text-primary mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+            {/* KOLOM KANAN: Banner Image (Mengambil 5 dari 12 kolom di Desktop) */}
+            <div className="lg:col-span-5 relative w-full rounded-2xl overflow-hidden shadow-xl border border-border bg-muted/50 lg:sticky lg:top-28 flex flex-col">
+              <Image
+                src="/images/feebanner.png"
+                alt="Informasi Fee Amrizal Escrow"
+                width={800}
+                height={1200}
+                className="w-full h-auto object-contain"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 -z-10 flex flex-col items-center justify-center text-muted-foreground text-sm font-medium">
+                <span>[ Area Banner Fee ]</span>
+              </div>
             </div>
           </div>
         </div>

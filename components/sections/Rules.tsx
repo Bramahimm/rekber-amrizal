@@ -13,17 +13,15 @@ const TRANSACTION_RULES = [
 export function Rules() {
   return (
     <Section className="bg-background">
-      <Container>
+      <Container className="py-8">
         <div className="max-w-4xl mx-auto bg-muted/30 border border-border rounded-2xl p-6 md:p-10">
           <div className="flex items-center gap-3 mb-8 border-b border-border pb-6">
-            <AlertCircle className="w-8 h-8 text-primary" />
             <div>
               <h2 className="text-2xl font-bold text-primary">
-                Syarat & Ketentuan Dasar
+                Ketentuan Dasar
               </h2>
               <p className="text-sm text-muted-foreground mt-1">
-                Harap baca parameter aturan berikut sebelum menggunakan layanan
-                kami.
+                Harap baca aturan berikut sebelum menggunakan layanan rekber amrizal.
               </p>
             </div>
           </div>

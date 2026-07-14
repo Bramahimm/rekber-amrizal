@@ -45,14 +45,14 @@ export function Footer() {
                 <Link
                   href="/report"
                   className="text-sm text-muted-foreground hover:text-secondary transition-smooth">
-                  Lapor Penipuan
+                  Lapor Akun
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="https://facebook.com/amrswkz" target="_blank"
                   className="text-sm text-muted-foreground hover:text-secondary transition-smooth">
-                  Hubungi Admin
+                  Hubungi Amrizal
                 </Link>
               </li>
             </ul>

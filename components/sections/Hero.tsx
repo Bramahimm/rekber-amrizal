@@ -19,22 +19,21 @@ import { cn } from "@/lib/utils";
 const BANNERS = [
   {
     id: 1,
-    // TODO: Siapkan gambar banner proporsional (contoh: 1200x500px) di folder public/images/
-    src: "/images/banner-1.jpg",
+    src: "/images/Banner.png",
     alt: "Profil Amrizal Rekber 1",
     fallbackColor: "bg-slate-900",
     label: "Keamanan Terjamin",
   },
   {
     id: 2,
-    src: "/images/banner-2.jpg",
+    src: "/images/Banner2.png",
     alt: "Profil Amrizal Rekber 2",
     fallbackColor: "bg-slate-800",
     label: "Proses Transparan",
   },
   {
     id: 3,
-    src: "/images/banner-3.jpg",
+    src: "/images/Banner3.png",
     alt: "Profil Amrizal Rekber 3",
     fallbackColor: "bg-slate-700",
     label: "Dukungan 24/7",
@@ -72,17 +71,17 @@ export function Hero() {
               )}>
               {/* Placeholder teks jika gambar belum ada. Nanti akan tertutup oleh Image jika src valid */}
               <div className="absolute inset-0 flex items-center justify-center text-white/50 font-heading text-2xl tracking-widest z-0">
-                [ BANNER {banner.id} PLACEHOLDER ]
+                NANTI DIISI BANNER SESUAI PERMINTAAN {banner.id}
               </div>
 
               {/* Uncomment dan sesuaikan src jika gambar sudah ada di folder public */}
-              {/* <Image 
+              <Image 
                 src={banner.src}
                 alt={banner.alt}
                 fill
                 priority={index === 0}
                 className="object-cover z-10"
-              /> */}
+              />
             </div>
           ))}
 
@@ -129,20 +128,20 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Layanan escrow profesional untuk jual-beli akun game, aset
-              digital. Kami menahan dana Anda hingga akun
+              Layanan Rekber profesional untuk jual-beli akun game, aset digital. Kami menahan dana Anda hingga akun
               diterima dengan aman.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <Link
                 href="https://facebook.com/amrswkz"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-smooth shadow-lg shadow-primary/10">
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-smooth shadow-lg shadow-primary/10"
+                target="_blank">
                 Gunakan Rekber Sekarang
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/transaction-guide"
+                href="/#panduan"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent text-accent-foreground text-sm font-medium rounded-lg hover:bg-accent/80 transition-smooth border border-border">
                 <BookOpen className="w-4 h-4 text-muted-foreground" />
                 Cara Kerja
