@@ -87,7 +87,7 @@ export function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="/#kontak"
+              href="https://facebook.com/amrswkz"
               onClick={() => handleMenuClick("/#kontak")}
               className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-smooth shadow-sm">
               Gunakan Rekber
@@ -132,7 +132,7 @@ export function Navbar() {
                 );
               })}
               <Link
-                href="/#kontak"
+                href="https://facebook.com/amrswkz"
                 onClick={() => handleMenuClick("/#kontak")}
                 className="mt-4 w-full text-center px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-smooth">
                 Gunakan Rekber
