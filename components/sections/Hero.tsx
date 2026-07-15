@@ -3,15 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Shield,
-  ArrowRight,
-  BookOpen,
-  LockKeyhole,
-  Zap,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { ArrowRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { cn } from "@/lib/utils";
@@ -33,7 +25,7 @@ const BANNERS = [
   },
   {
     id: 3,
-    src: "/images/Banner3.png",
+    src: "/images/Banner4.png",
     alt: "Profil Amrizal Rekber 3",
     fallbackColor: "bg-slate-700",
     label: "Dukungan 24/7",
@@ -75,7 +67,7 @@ export function Hero() {
               </div>
 
               {/* Uncomment dan sesuaikan src jika gambar sudah ada di folder public */}
-              <Image 
+              <Image
                 src={banner.src}
                 alt={banner.alt}
                 fill
@@ -121,24 +113,24 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Column: Copywriting & CTA */}
           <div className="space-y-8 text-center lg:text-left">
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-[1.1]">
               Amankan Transaksi Digital Anda Bersama{" "}
               <span className="text-secondary">Amrizal Fathurrahman.</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Layanan Rekber profesional untuk jual-beli akun game, aset digital. Kami menahan dana Anda hingga akun
-              diterima dengan aman.
+              Layanan Rekber profesional untuk jual-beli akun game, aset
+              digital. Kami menahan dana Anda hingga akun diterima dengan aman.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <Link
                 href="https://facebook.com/amrswkz"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-smooth shadow-lg shadow-primary/10"
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white text-base font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] hover:-translate-y-1">
                 Gunakan Rekber Sekarang
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/#panduan"
@@ -147,8 +139,6 @@ export function Hero() {
                 Cara Kerja
               </Link>
             </div>
-
-            
           </div>
 
           {/* Right Column: Trust Visuals / Statistics */}

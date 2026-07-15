@@ -3,6 +3,7 @@ export const MAIN_NAV = [
   { label: "Panduan", href: "/#panduan" },
   { label: "Cek Blacklist", href: "/blacklist" },
   { label: "Lapor Akun", href: "/report" },
+  { label: "Joki Wall", href: "/joki-wall" },
   { label: "Kontak", href: "/#kontak" },
 ];
 
